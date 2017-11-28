@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.authors      = { "unovo" => "dev.lianyu@unovo.com.cn" }
 
   s.platform     = :ios, "5.0"
-  s.source       = { :path  => '../UNORoute' }
-  s.source_files  = "*.{h,m}"
+  s.source       = { :path  => 'UNORoute' }
+  s.source_files  = "**/*.{h,m}"
 
   s.public_header_files = "*.h"
 
