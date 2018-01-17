@@ -19,13 +19,15 @@
 
 - (NSDictionary *)paramsWithoutNUllValue{
     if (_paramsWithoutNUllValue == nil && self.params != nil) {
+        NSMutableDictionary *temp = [NSMutableDictionary dictionary];
         for (id key in self.params) {
             id value = self.params[key];
             if ([value isKindOfClass:[NSNull class]]) {
                 continue;
             }
-            [_paramsWithoutNUllValue setValue:value forKey:key];
+            [temp setValue:value forKey:key];
         }
+        _paramsWithoutNUllValue = temp.copy;
     }
     
     return _paramsWithoutNUllValue;
