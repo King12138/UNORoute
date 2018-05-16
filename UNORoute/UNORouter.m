@@ -421,7 +421,7 @@
         if (typeEncoding != NULL) {
             class_addMethod(newCls, @selector(targetViewControllerWithRequest:), targetVCimp, typeEncoding);
         } else {
-            Method targetVCMethod = class_getClassMethod([UNORouteHandler class], @selector(targetViewControllerWithRequest:));
+            Method targetVCMethod = class_getInstanceMethod([UNORouteHandler class], @selector(targetViewControllerWithRequest:));
             typeEncoding = method_getTypeEncoding(targetVCMethod);
             class_addMethod(newCls, @selector(targetViewControllerWithRequest:), targetVCimp, typeEncoding);
         }
