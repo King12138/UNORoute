@@ -70,14 +70,14 @@ typedef void(^RouteCallBack)(id);
 
 @end
 
-// 这个方法支持hook,默认返回originRequest
-// 可以重写这个方法 给request做一些标记,然后配合自定义的handler,可以完成大部分你希望的需求
+// 这个方法支持hook,默认返回nil
+// 可以重写这个方法 返回你希望被执行的handler
 typedef NS_ENUM(NSInteger,UNORoute_Api_Type) {
     UNORoute_Api_TypeDefault,
     UNORoute_Api_TypeFast
 };
 @interface UNORouter (handlerAction_hook)
-+ (UNORouteRequest *)hook_requestWithOriginReqest:(UNORouteRequest *)originRequest apiType:(UNORoute_Api_Type)apiType;
++ (UNORouteHandler *)hook_requestWithOriginReqest:(UNORouteRequest *)originRequest apiType:(UNORoute_Api_Type)apiType;
 @end
 
 @interface UNORouter (observing)

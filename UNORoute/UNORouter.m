@@ -102,8 +102,26 @@
 
 @end
 
+@interface UNORouter ()
++ (BOOL)handlerWithRequest:(UNORouteRequest *)request
+                   handler:(UNORouteHandler *)handler;
+@end
+
 @implementation UNORouter
 
++ (BOOL)handlerWithRequest:(UNORouteRequest *)request handler:(UNORouteHandler *)handler{
+    if (handler !=nil && [handler shouldHandleWithRequest:request]) {
+        NSError *error = nil;
+        BOOL isOK = [handler handleRequest:request error:&error];
+        if (!isOK || error){
+            UN_Route_Action(NSLog(@"handleRequest error for path %@",request.path));
+        }
+        return isOK;
+    }else{
+        UN_Route_Action(NSLog(@"can not handle the handler %@ for path %@",handler,request.path));
+        return false;
+    }
+}
 
 @end
 
@@ -223,20 +241,15 @@
     request.completion = completion;
     request.path = path.absoluteString;
     
-    request = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeDefault];
-    
-    if ([handler shouldHandleWithRequest:request]) {
-        NSError *error = nil;
-        BOOL isOK = [handler handleRequest:request error:&error];
-        if (!isOK || error){
-            UN_Route_Action(NSLog(@"handleRequest error for path %@",path.absoluteString));
-        }
-        return isOK;
+    UNORouteHandler *hook_handler = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeFast];
+
+    if(hook_handler != nil){
+        return [self handlerWithRequest:request
+                                handler:hook_handler];
     }else{
-        UN_Route_Action(NSLog(@"can not handle the handler %@ for path %@",handler,path.absoluteString));
-        return false;
+        return [self handlerWithRequest:request
+                                handler:handler];
     }
-    
 }
 
 @end
@@ -337,10 +350,15 @@
     request.completion = completion;
     request.path = path.absoluteString;
     
-    request = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeFast];
+    UNORouteHandler *hook_handler = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeFast];
     
-    NSError *error = nil;
-    return [handler handleRequest:request error:&error];
+    if(hook_handler != nil){
+        return [self handlerWithRequest:request
+                                handler:hook_handler];
+    }else{
+        return [self handlerWithRequest:request
+                                handler:handler];
+    }
 }
 
 + (Class)classWithClassName:(NSString *)className storyBoardName:(NSString *)storyBoardName{
@@ -436,8 +454,8 @@
 @end
 
 @implementation UNORouter (handlerAction_hook)
-+ (UNORouteRequest *)hook_requestWithOriginReqest:(UNORouteRequest *)originRequest apiType:(UNORoute_Api_Type)apiType{
-    return originRequest;
++ (UNORouteHandler *)hook_requestWithOriginReqest:(UNORouteRequest *)originRequest apiType:(UNORoute_Api_Type)apiType{
+    return nil;
 }
 @end
 
