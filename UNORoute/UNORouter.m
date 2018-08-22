@@ -223,6 +223,8 @@
     request.completion = completion;
     request.path = path.absoluteString;
     
+    request = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeDefault];
+    
     if ([handler shouldHandleWithRequest:request]) {
         NSError *error = nil;
         BOOL isOK = [handler handleRequest:request error:&error];
@@ -335,6 +337,8 @@
     request.completion = completion;
     request.path = path.absoluteString;
     
+    request = [self hook_requestWithOriginReqest:request apiType:UNORoute_Api_TypeFast];
+    
     NSError *error = nil;
     return [handler handleRequest:request error:&error];
 }
@@ -429,6 +433,12 @@
     }
 }
 
+@end
+
+@implementation UNORouter (handlerAction_hook)
++ (UNORouteRequest *)hook_requestWithOriginReqest:(UNORouteRequest *)originRequest apiType:(UNORoute_Api_Type)apiType{
+    return originRequest;
+}
 @end
 
 
