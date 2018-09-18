@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "UNO_Router.h"
 #import "ViewController.h"
+#import "UNBasenNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ViewController *rootVC = [[ViewController alloc] init];
-    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    UNBasenNavigationController *nv = [[UNBasenNavigationController alloc] initWithRootViewController:rootVC];
     UNORouteHost *host = [[UNORouteHost alloc] init];
     host.scheme = @"MTKToute";
     host.host = @"example";

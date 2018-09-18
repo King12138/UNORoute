@@ -18,10 +18,13 @@
 		2E77ECEF2150E8F400D36E33 /* UNORouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECE82150E8F400D36E33 /* UNORouteRequest.m */; };
 		2E77ECF02150E8F400D36E33 /* UNORouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECEB2150E8F400D36E33 /* UNORouter.m */; };
 		2E77ECF12150E8F400D36E33 /* UNORouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECEC2150E8F400D36E33 /* UNORouteHandler.m */; };
-		2E77ECF52150E92600D36E33 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECF42150E92600D36E33 /* BaseViewController.m */; };
 		2E77ECF82150E95D00D36E33 /* ViewControllerWithParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECF72150E95D00D36E33 /* ViewControllerWithParams.m */; };
 		2E77ECFB2150E96800D36E33 /* ViewControllerPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECFA2150E96800D36E33 /* ViewControllerPush.m */; };
 		2E77ECFE2150F08D00D36E33 /* PushVcHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ECFD2150F08D00D36E33 /* PushVcHandler.m */; };
+		2E77ED0D2151026500D36E33 /* btn_navi_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E77ED062151026500D36E33 /* btn_navi_back@3x.png */; };
+		2E77ED0E2151026500D36E33 /* btn_navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E77ED072151026500D36E33 /* btn_navi_back@2x.png */; };
+		2E77ED0F2151026500D36E33 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ED092151026500D36E33 /* BaseViewController.m */; };
+		2E77ED102151026500D36E33 /* UNBasenNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77ED0A2151026500D36E33 /* UNBasenNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,14 +50,18 @@
 		2E77ECEB2150E8F400D36E33 /* UNORouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNORouter.m; sourceTree = "<group>"; };
 		2E77ECEC2150E8F400D36E33 /* UNORouteHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNORouteHandler.m; sourceTree = "<group>"; };
 		2E77ECF22150E8FE00D36E33 /* UNO_Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UNO_Router.h; path = ../UNO_Router.h; sourceTree = "<group>"; };
-		2E77ECF32150E92600D36E33 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		2E77ECF42150E92600D36E33 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		2E77ECF62150E95D00D36E33 /* ViewControllerWithParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerWithParams.h; sourceTree = "<group>"; };
 		2E77ECF72150E95D00D36E33 /* ViewControllerWithParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWithParams.m; sourceTree = "<group>"; };
 		2E77ECF92150E96800D36E33 /* ViewControllerPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerPush.h; sourceTree = "<group>"; };
 		2E77ECFA2150E96800D36E33 /* ViewControllerPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerPush.m; sourceTree = "<group>"; };
 		2E77ECFC2150F08D00D36E33 /* PushVcHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushVcHandler.h; sourceTree = "<group>"; };
 		2E77ECFD2150F08D00D36E33 /* PushVcHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushVcHandler.m; sourceTree = "<group>"; };
+		2E77ED062151026500D36E33 /* btn_navi_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navi_back@3x.png"; sourceTree = "<group>"; };
+		2E77ED072151026500D36E33 /* btn_navi_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navi_back@2x.png"; sourceTree = "<group>"; };
+		2E77ED092151026500D36E33 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2E77ED0A2151026500D36E33 /* UNBasenNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNBasenNavigationController.m; sourceTree = "<group>"; };
+		2E77ED0B2151026500D36E33 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2E77ED0C2151026500D36E33 /* UNBasenNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNBasenNavigationController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,8 @@
 		2E77ECCA2150E8D200D36E33 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				2E77ED082151026500D36E33 /* BaseElement */,
+				2E77ED052151026500D36E33 /* Resource */,
 				2E77ECE12150E8F400D36E33 /* source */,
 				2E77ECCB2150E8D200D36E33 /* AppDelegate.h */,
 				2E77ECCC2150E8D200D36E33 /* AppDelegate.m */,
@@ -98,8 +107,6 @@
 				2E77ECFD2150F08D00D36E33 /* PushVcHandler.m */,
 				2E77ECF62150E95D00D36E33 /* ViewControllerWithParams.h */,
 				2E77ECF72150E95D00D36E33 /* ViewControllerWithParams.m */,
-				2E77ECF32150E92600D36E33 /* BaseViewController.h */,
-				2E77ECF42150E92600D36E33 /* BaseViewController.m */,
 				2E77ECD12150E8D200D36E33 /* Main.storyboard */,
 				2E77ECD42150E8D600D36E33 /* Assets.xcassets */,
 				2E77ECD62150E8D600D36E33 /* LaunchScreen.storyboard */,
@@ -127,6 +134,26 @@
 			);
 			name = source;
 			path = ../../UNORoute/source;
+			sourceTree = "<group>";
+		};
+		2E77ED052151026500D36E33 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2E77ED062151026500D36E33 /* btn_navi_back@3x.png */,
+				2E77ED072151026500D36E33 /* btn_navi_back@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2E77ED082151026500D36E33 /* BaseElement */ = {
+			isa = PBXGroup;
+			children = (
+				2E77ED092151026500D36E33 /* BaseViewController.m */,
+				2E77ED0A2151026500D36E33 /* UNBasenNavigationController.m */,
+				2E77ED0B2151026500D36E33 /* BaseViewController.h */,
+				2E77ED0C2151026500D36E33 /* UNBasenNavigationController.h */,
+			);
+			path = BaseElement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +216,8 @@
 				2E77ECD82150E8D600D36E33 /* LaunchScreen.storyboard in Resources */,
 				2E77ECD52150E8D600D36E33 /* Assets.xcassets in Resources */,
 				2E77ECD32150E8D200D36E33 /* Main.storyboard in Resources */,
+				2E77ED0D2151026500D36E33 /* btn_navi_back@3x.png in Resources */,
+				2E77ED0E2151026500D36E33 /* btn_navi_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E77ECED2150E8F400D36E33 /* UNORouteHost.m in Sources */,
-				2E77ECF52150E92600D36E33 /* BaseViewController.m in Sources */,
 				2E77ECF82150E95D00D36E33 /* ViewControllerWithParams.m in Sources */,
 				2E77ECD02150E8D200D36E33 /* ViewController.m in Sources */,
+				2E77ED0F2151026500D36E33 /* BaseViewController.m in Sources */,
 				2E77ECEE2150E8F400D36E33 /* UIViewController+UNORoute.m in Sources */,
 				2E77ECFE2150F08D00D36E33 /* PushVcHandler.m in Sources */,
 				2E77ECF12150E8F400D36E33 /* UNORouteHandler.m in Sources */,
@@ -210,6 +239,7 @@
 				2E77ECEF2150E8F400D36E33 /* UNORouteRequest.m in Sources */,
 				2E77ECF02150E8F400D36E33 /* UNORouter.m in Sources */,
 				2E77ECFB2150E96800D36E33 /* ViewControllerPush.m in Sources */,
+				2E77ED102151026500D36E33 /* UNBasenNavigationController.m in Sources */,
 				2E77ECCD2150E8D200D36E33 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
