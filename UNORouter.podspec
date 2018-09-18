@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "5.0"
   s.source       = { :path  => 'UNORoute' }
-  s.source_files  = "**/*.{h,m}"
+  s.source_files  = "UNORoute/source/*.{h,m}"
 
-  s.public_header_files = "*.h"
+  s.public_header_files = "UNORoute/UNO_Router.h"
 
   s.requires_arc = true
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "${SRCROOT}/../../UNOCommonUtl/UNORoute/UNORoute/UNO_Router.h " }
